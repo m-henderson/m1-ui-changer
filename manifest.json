@@ -1,0 +1,19 @@
+{
+  "name": "Append Test Text",
+  "description": "Add test123 to body",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://dashboard.m1.com/d/invest/portfolio*"],
+	  "css":["./Theme.css"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Append Test Text"
+  },
+  "manifest_version": 2
+}

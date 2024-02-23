@@ -1,0 +1,29 @@
+
+.emptyDiv{
+		margin-top: 50px;
+}
+
+.extensionClass {
+	margin: 20px;
+    margin-top: 50px;
+    font-size: 46px;	
+	margin-left: 50px;
+	display: inline;
+}
+
+.extensionClassTwo{
+		display: inline;
+		margin-left: 50px;
+		color: #1f7c3e;
+		font-size: 31px;
+}
+
+.labelDiv{
+	    margin-left: 53px;
+		
+}
+
+.labelDiv2{
+	margin-left: 274px; 
+	
+}
