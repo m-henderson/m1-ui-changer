@@ -36,28 +36,50 @@ const interval = setInterval(function() {
 
 			if (dividends !== "$--" && mewClass.length < 1){
 				
+				var number1 = Number(dividends.replace(/[^0-9.-]+/g,""));
+				var number2 = Number(capGains.replace(/[^0-9.-]+/g,""));
+				let USDollar = new Intl.NumberFormat('en-US', {
+					style: 'currency',
+					currency: 'USD',
+				});
+
+				var total = number1 + number2;
 				
+				const root = document.createElement("div");
+				root.innerHTML = `
+				<div class="container">
+					<div class="column">
+						<div class="item">
+							<p class="label">Current Value</p>
+							<div class="totalValue">${totalValue}</div>
+						</div>
+					</div> 
 				
-				const empty = document.createElement("div");
-				empty.className = "emptyDiv";
-				item.appendChild(empty);
+					<div class="column">
+						<div class="item">
+							<p>All-time gain</p>
+							<div class="allTimeGain">+ ${USDollar.format(total)}</div>
+						</div>
+					</div>
 				
-				const label = document.createElement("span");
-				label.className = "labelDiv";
-				label.innerText = "Total Value";
-				item.appendChild(label);
+					<div class="column">
+						<div class="item">
+							<p>All-time return</p>
+							<div class="allTimeReturn">
+							<span>▲</span>115.15%
+							</div>
+						</div>
+					</div>
+			  	</div>
+				`
 				
-				const labe2 = document.createElement("span");
-				labe2.className = "labelDiv2";
-				labe2.innerText = "All-time Return";
-				item.appendChild(labe2);
+				item.appendChild(root);
 				
-				const empty2 = document.createElement("div");
-				item.appendChild(empty2);
+		
 				
 				const para = document.createElement("h1");
 				para.className = "extensionClass";
-				para.innerText = totalValue;
+				
 				item.appendChild(para);
 				
 				const gain = document.createElement("h2");
@@ -66,21 +88,6 @@ const interval = setInterval(function() {
 				const percent = document.createElement("h2");
 				percent.className = "extensionClassThree";
 				
-				
-				var number1 = Number(dividends.replace(/[^0-9.-]+/g,""));
-				var number2 = Number(capGains.replace(/[^0-9.-]+/g,""));
-				var total = number1 + number2;
-				
-				
-				let USDollar = new Intl.NumberFormat('en-US', {
-					style: 'currency',
-					currency: 'USD',
-				});
-
-				
-				gain.innerText = '+' + USDollar.format(total);
-				item.appendChild(gain);
-				item.appendChild(percent);
 		
 			}
 
@@ -96,4 +103,4 @@ const interval = setInterval(function() {
         console.log("Did not find it.");
 
     }
- }, 10000);
+ }, 1000);

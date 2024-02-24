@@ -27,3 +27,49 @@
 	margin-left: 274px; 
 	
 }
+
+.container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height:150px;
+  }
+  
+  .column {
+	margin-top: 10px;
+	display:flex;
+	justify-content:space-around;
+	width: 100%;
+  }
+
+  .totalValue {
+	font-weight: 300;
+	font-size: 70px;
+	letter-spacing: "-0.25"
+  }
+
+  .allTimeGain {
+	font-weight: 400;
+	font-size: 40px;
+	color: green;
+	letter-spacing: "-0.25"
+  }
+
+  .allTimeReturn {
+	font-weight: 400;
+	font-size: 40px;
+	letter-spacing: "-0.25";
+	color: green;
+  }
+
+  .allTimeReturn > span {
+	font-size: 20px;
+  }
+
+  .label {
+	font-weight: 400;
+	font-size:14px;
+	line-height: 20px;
+	letter-spacing:0;
+	color: rgb(84 96 115 1)
+  }
