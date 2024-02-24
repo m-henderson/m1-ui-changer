@@ -48,7 +48,7 @@ const interval = setInterval(function() {
 				const root = document.createElement("div");
 				root.innerHTML = `
 				<div class="container">
-					<div class="column">
+					<div class="column" style="justify-content: start;">
 						<div class="item">
 							<p class="label">Current Value</p>
 							<div class="totalValue">${totalValue}</div>
